@@ -22,10 +22,15 @@
             // Console.WriteLine(mycar.modelName);
 
             //Property
-            BankAc bank = new BankAc();
-            bank.AccHolder = "Bikal";
-            bank.Balance = 1000;
-            Console.WriteLine($"Account Holder: {bank.AccHolder}");
-            Console.WriteLine($"Balance: {bank.Balance}");
+            // BankAc bank = new BankAc();
+            // bank.AccHolder = "Bikal";
+            // bank.Balance = 1000;
+            // Console.WriteLine($"Account Holder: {bank.AccHolder}");
+            // Console.WriteLine($"Balance: {bank.Balance}");
+
+            //Abstraction
+            Dog myDog = new Dog();
+            myDog.animalsound();
+            myDog.sleep();
         }
     }
