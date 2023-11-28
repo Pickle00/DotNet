@@ -29,8 +29,17 @@
             // Console.WriteLine($"Balance: {bank.Balance}");
 
             //Abstraction
-            Dog myDog = new Dog();
-            myDog.animalsound();
-            myDog.sleep();
+            // Dog myDog = new Dog();
+            // myDog.animalsound();
+            // myDog.sleep();
+
+            //Interfaces
+            Rabbit rabbit = new Rabbit();
+            rabbit.run();
+            Eagle eagle = new Eagle();
+            eagle.hunt();
+            Fish fish = new Fish();
+            fish.run();
+            fish.hunt();
         }
     }
