@@ -1,11 +1,16 @@
 ﻿using System;
+// using Bike;
+
+
+namespace Program
+{
     public class Program
     {
         static void Main(string[] args)
         {
 
             //ShapeDemo Concepts of OOP
-            
+
             // Shape s1, s2;
             // s1 = new Square(3);
             // s2 = new Rectangle(2, 3);
@@ -21,6 +26,16 @@
             // mycar.sound();
             // Console.WriteLine(mycar.modelName);
 
+            // MultiLevel-Inhertance
+            // Bike.MyBike myBike = new Bike.MyBike();
+            // MyBike b = new MyBike();
+            // myBike.start();
+            // myBike.stop();
+            // bike.Dirtbike mybike = new bike.Dirtbike();
+            // bike.start();
+            // bike.stop();
+
+
             //Property
             // BankAc bank = new BankAc();
             // bank.AccHolder = "Bikal";
@@ -34,12 +49,13 @@
             // myDog.sleep();
 
             //Interfaces
-            Rabbit rabbit = new Rabbit();
-            rabbit.run();
-            Eagle eagle = new Eagle();
-            eagle.hunt();
-            Fish fish = new Fish();
-            fish.run();
-            fish.hunt();
+            // Rabbit rabbit = new Rabbit();
+            // rabbit.run();
+            // Eagle eagle = new Eagle();
+            // eagle.hunt();
+            // Fish fish = new Fish();
+            // fish.run();
+            // fish.hunt();
         }
     }
+}
