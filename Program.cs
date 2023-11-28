@@ -56,6 +56,10 @@ namespace Program
             // Fish fish = new Fish();
             // fish.run();
             // fish.hunt();
+            
+            Console.WriteLine ("Hello Mono World");
+            HelloWorld obj = new HelloWorld();
+            obj.add<string>("my name");
         }
     }
 }
