@@ -1,5 +1,5 @@
 ﻿using System;
-// using Bike;
+using Bike;
 
 
 namespace Program
@@ -27,13 +27,9 @@ namespace Program
             // Console.WriteLine(mycar.modelName);
 
             // MultiLevel-Inhertance
-            // Bike.MyBike myBike = new Bike.MyBike();
-            // MyBike b = new MyBike();
-            // myBike.start();
-            // myBike.stop();
-            // bike.Dirtbike mybike = new bike.Dirtbike();
-            // bike.start();
-            // bike.stop();
+            Dirtbike myBike = new Dirtbike();
+            myBike.start();
+            myBike.stop();
 
 
             //Property
@@ -57,9 +53,10 @@ namespace Program
             // fish.run();
             // fish.hunt();
             
-            Console.WriteLine ("Hello Mono World");
-            HelloWorld obj = new HelloWorld();
-            obj.add<string>("my name");
+            //Generic
+            // Console.WriteLine ("Hello Mono World");
+            // HelloWorld obj = new HelloWorld();
+            // obj.add<string>("my name");
         }
     }
 }

@@ -1,28 +1,37 @@
 
 
-class BankAc{
+class BankAc
+{
     private string accHolder;
     private decimal balance;
 
-    public string AccHolder{
-        get{
+    public string AccHolder
+    {
+        get
+        {
             return accHolder;
         }
 
-        set{
+        set
+        {
             accHolder = value;
         }
     }
 
-    public decimal Balance{
-        get{
+    public decimal Balance
+    {
+        get
+        {
             return balance;
         }
-        set{
-            if(value >= 0){
+        set
+        {
+            if (value >= 0)
+            {
                 balance = value;
             }
-            else{
+            else
+            {
                 Console.WriteLine("Balance cannot be Negative");
             }
         }
