@@ -79,20 +79,70 @@ namespace Program
 
 
             //Singleton
-            Message m1 = new Message();
-            Message m2 = new Message();
+            // Message m1 = new Message();
+            // Message m2 = new Message();
 
             //Different Instance Output comes FALSE
-            Console.WriteLine(m1==m2);
+            // Console.WriteLine(m1==m2);
 
-            Singletonclass singletonInstance = Singletonclass.Instance;
 
-            singletonInstance.DisplayMessage();
+            //Using Same Instance
+            // Singletonclass singletonInstance = Singletonclass.Instance;
 
-            Singletonclass anotherInstance = Singletonclass.Instance;
+            // singletonInstance.DisplayMessage();
 
-            Console.WriteLine(singletonInstance==anotherInstance);
+            // Singletonclass anotherInstance = Singletonclass.Instance;
 
+            // Console.WriteLine(singletonInstance==anotherInstance);
+
+
+            //Without-Factory
+            string cardType = "";
+            int cardNo;
+            Console.WriteLine("Select your card type");
+            Console.WriteLine("1. MoneyBack");
+            Console.WriteLine("2. Platinum");
+            Console.WriteLine("3. Titanum");
+            Console.WriteLine("Enter No:");
+            cardNo = int.Parse(Console.ReadLine());
+            // CreditCard cardDetails = null;
+
+            switch(cardNo){
+                case 1:
+                cardType = "MoneyBack";
+                break;
+                case 2:
+                cardType = "Platinum";
+                break;
+                case 3:
+                cardType = "Titanum";
+                break;
+                default:
+                Console.WriteLine("Choose from given option:");
+                break;
+            }
+
+
+
+            // if(cardType == "MoneyBack"){
+            //     cardDetails = new MoneyBack();
+            // }
+            // else if(cardType == "Platinum"){
+            //     cardDetails = new Platinum();
+            // }
+            // else if(cardType == "Titanum"){
+            //     cardDetails = new Titanum();
+            // }
+            CreditCard cardDetails = CreditCardFactory.GetCreditCard(cardType);
+
+            if(cardDetails != null){
+                Console.WriteLine($"CardType: {cardDetails.GetCardType()}");
+                Console.WriteLine($"CardType: {cardDetails.GetCreditLimit()}");
+                Console.WriteLine($"CardType: {cardDetails.GetAnnualCharge()}");
+            }
+            else{
+                Console.WriteLine("Invalid Type");
+            }
         }
     }
 
