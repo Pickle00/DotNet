@@ -92,8 +92,6 @@ namespace Program
             Singletonclass anotherInstance = Singletonclass.Instance;
 
             Console.WriteLine(singletonInstance==anotherInstance);
-            
-
 
         }
     }
