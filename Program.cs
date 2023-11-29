@@ -27,9 +27,9 @@ namespace Program
             // Console.WriteLine(mycar.modelName);
 
             // MultiLevel-Inhertance
-            Dirtbike myBike = new Dirtbike();
-            myBike.start();
-            myBike.stop();
+            // Dirtbike myBike = new Dirtbike();
+            // myBike.start();
+            // myBike.stop();
 
 
             //Property
@@ -57,6 +57,18 @@ namespace Program
             // Console.WriteLine ("Hello Mono World");
             // HelloWorld obj = new HelloWorld();
             // obj.add<string>("my name");
+
+            int[] intArray = {1, 2, 3};
+            double[] doubleArray = {1.0, 2.0, 3.0};
+            String[] stringArray ={"Knee", "Tika", "Nitika"};
+
+            Generic generic = new Generic();
+            generic.DisplayElements(intArray);
+
+            //Arguments passed through same method
+            generic.GenericDisplay(doubleArray);
+            generic.GenericDisplay(stringArray);
+
         }
     }
 }
