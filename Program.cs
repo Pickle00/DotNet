@@ -88,68 +88,61 @@ namespace Program
 
             //Using Same Instance
             // Singletonclass singletonInstance = Singletonclass.Instance;
-
             // singletonInstance.DisplayMessage();
-
             // Singletonclass anotherInstance = Singletonclass.Instance;
-
             // Console.WriteLine(singletonInstance==anotherInstance);
 
 
             //Without-Factory
-            string cardType = "";
-            int cardNo;
-            Console.WriteLine("Select your card type");
-            Console.WriteLine("1. MoneyBack");
-            Console.WriteLine("2. Platinum");
-            Console.WriteLine("3. Titanum");
-            Console.WriteLine("Enter No:");
-            cardNo = int.Parse(Console.ReadLine());
-            // CreditCard cardDetails = null;
+            // string cardType = "";
+            // int cardNo;
+            // Console.WriteLine("Select your card type");
+            // Console.WriteLine("1. MoneyBack");
+            // Console.WriteLine("2. Platinum");
+            // Console.WriteLine("3. Titanum");
+            // Console.WriteLine("Enter No:");
+            // cardNo = int.Parse(Console.ReadLine());
+            // // CreditCard cardDetails = null;
 
-            switch(cardNo){
-                case 1:
-                cardType = "MoneyBack";
-                break;
-                case 2:
-                cardType = "Platinum";
-                break;
-                case 3:
-                cardType = "Titanum";
-                break;
-                default:
-                Console.WriteLine("Choose from given option:");
-                break;
-            }
-
-
-
-            // if(cardType == "MoneyBack"){
-            //     cardDetails = new MoneyBack();
+            // switch(cardNo){
+            //     case 1:
+            //     cardType = "MoneyBack";
+            //     break;
+            //     case 2:
+            //     cardType = "Platinum";
+            //     break;
+            //     case 3:
+            //     cardType = "Titanum";
+            //     break;
+            //     default:
+            //     Console.WriteLine("Choose from given option:");
+            //     break;
             // }
-            // else if(cardType == "Platinum"){
-            //     cardDetails = new Platinum();
-            // }
-            // else if(cardType == "Titanum"){
-            //     cardDetails = new Titanum();
-            // }
-            CreditCard cardDetails = CreditCardFactory.GetCreditCard(cardType);
 
-            if(cardDetails != null){
-                Console.WriteLine($"CardType: {cardDetails.GetCardType()}");
-                Console.WriteLine($"CardType: {cardDetails.GetCreditLimit()}");
-                Console.WriteLine($"CardType: {cardDetails.GetAnnualCharge()}");
-            }
-            else{
-                Console.WriteLine("Invalid Type");
-            }
+            // CreditCard cardDetails = CreditCardFactory.GetCreditCard(cardType);
+
+            // if(cardDetails != null){
+            //     Console.WriteLine($"CardType: {cardDetails.GetCardType()}");
+            //     Console.WriteLine($"CardType: {cardDetails.GetCreditLimit()}");
+            //     Console.WriteLine($"CardType: {cardDetails.GetAnnualCharge()}");
+            // }
+            // else{
+            //     Console.WriteLine("Invalid Type");
+            // }
+
+
+            //Builder Design pattern
+            LaptopBuilder builder = new LaptopBuilder();
+            builder.setOS("Windows");
+            builder.setSize(15);
+            builder.setGraphics("GTX 1650");
         }
     }
 
-    class Message(){
-        public void dismessage(){
-                Console.WriteLine("This is a message");
-            }
+    // class Message(){
+    //     public void dismessage(){
+    //             Console.WriteLine("This is a message");
+    //         }
 
-    }
+    // }
 }
