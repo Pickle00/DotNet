@@ -14,6 +14,8 @@ namespace SingletonDemo{
                 instance = new Singletonclass();
             }
             return instance;
+
+            //instance = new singletonclass()
         }
       }
 

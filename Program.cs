@@ -60,7 +60,7 @@ namespace Program
             // fish.run();
             // fish.hunt();
 
-            
+
             //Generic
             // Console.WriteLine ("Hello Mono World");
             // HelloWorld obj = new HelloWorld();
@@ -82,15 +82,16 @@ namespace Program
             // Message m1 = new Message();
             // Message m2 = new Message();
 
-            //Different Instance Output comes FALSE
-            // Console.WriteLine(m1==m2);
+            // Different Instance Output comes FALSE
+            // Console.WriteLine(m1 == m2);
 
 
-            //Using Same Instance
-            // Singletonclass singletonInstance = Singletonclass.Instance;
+            // Using Same Instance
+            
+            Singletonclass singletonInstance = Singletonclass.Instance;
             // singletonInstance.DisplayMessage();
             // Singletonclass anotherInstance = Singletonclass.Instance;
-            // Console.WriteLine(singletonInstance==anotherInstance);
+            Console.WriteLine(singletonInstance);
 
 
             //Without-Factory
@@ -132,17 +133,33 @@ namespace Program
 
 
             //Builder Design pattern
-            LaptopBuilder builder = new LaptopBuilder();
-            builder.setOS("Windows");
-            builder.setSize(15);
-            builder.setGraphics("GTX 1650");
+            // LaptopBuilder builder = new LaptopBuilder();
+            // builder.setOS("Windows");
+            // builder.setSize(15);
+            // builder.setGraphics("GTX 1650");
+
+
+            //DECORATOR
+            IPizza pizza =new Baccon(new Pineapple(new BasePizza()));
+            pizza.prepare();
+
+            //Nirvan
+            string name = "new";
+            string model = "cloud";
+            Plane<string> p = new Plane<string>(name,model);
+            p.display();
+
+            
         }
     }
 
-    // class Message(){
-    //     public void dismessage(){
-    //             Console.WriteLine("This is a message");
-    //         }
+    //Singleton instance
+    // class Message()
+    // {
+    //     public void dismessage()
+    //     {
+    //         Console.WriteLine("This is a message");
+    //     }
 
     // }
 }

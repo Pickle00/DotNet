@@ -48,6 +48,18 @@ namespace ShapeDemo
     public class Circle : Shape
     {
         public double radius;
+
+        public Circle(double radius){
+            this.radius = radius;
+            this.area = radius*radius;
+        }
+
+        
+
+        public double getArea(){
+            return radius*radius;
+
+        }
     }
 
     public class CompositeShape : IShape
@@ -66,4 +78,17 @@ namespace ShapeDemo
             return this.s1.getArea() + this.s2.getArea();
         }
     }
+
+
+    // public class Shapes{
+    //     static void Main(string[] args){
+    //         //ShapeDemo Concepts of OOP
+
+    //         Shape s1, s2;
+    //         s1 = new Square(3);
+    //         s2 = new Rectangle(2, 3);
+    //         CompositeShape c = new CompositeShape(s1, s2);
+    //         Console.WriteLine(c.getArea());
+    //     }
+    // }
 }
