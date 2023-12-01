@@ -87,11 +87,11 @@ namespace Program
 
 
             // Using Same Instance
-            
-            Singletonclass singletonInstance = Singletonclass.Instance;
+
+            // Singletonclass singletonInstance = Singletonclass.Instance;
             // singletonInstance.DisplayMessage();
             // Singletonclass anotherInstance = Singletonclass.Instance;
-            Console.WriteLine(singletonInstance);
+            // Console.WriteLine(singletonInstance);
 
 
             //Without-Factory
@@ -105,29 +105,32 @@ namespace Program
             // cardNo = int.Parse(Console.ReadLine());
             // // CreditCard cardDetails = null;
 
-            // switch(cardNo){
+            // switch (cardNo)
+            // {
             //     case 1:
-            //     cardType = "MoneyBack";
-            //     break;
+            //         cardType = "MoneyBack";
+            //         break;
             //     case 2:
-            //     cardType = "Platinum";
-            //     break;
+            //         cardType = "Platinum";
+            //         break;
             //     case 3:
-            //     cardType = "Titanum";
-            //     break;
+            //         cardType = "Titanum";
+            //         break;
             //     default:
-            //     Console.WriteLine("Choose from given option:");
-            //     break;
+            //         Console.WriteLine("Choose from given option:");
+            //         break;
             // }
 
             // CreditCard cardDetails = CreditCardFactory.GetCreditCard(cardType);
 
-            // if(cardDetails != null){
+            // if (cardDetails != null)
+            // {
             //     Console.WriteLine($"CardType: {cardDetails.GetCardType()}");
             //     Console.WriteLine($"CardType: {cardDetails.GetCreditLimit()}");
             //     Console.WriteLine($"CardType: {cardDetails.GetAnnualCharge()}");
             // }
-            // else{
+            // else
+            // {
             //     Console.WriteLine("Invalid Type");
             // }
 
@@ -138,18 +141,28 @@ namespace Program
             // builder.setSize(15);
             // builder.setGraphics("GTX 1650");
 
+                IHouseBuilder simpleHouseBuilder = new SimpleHouseBuilder();
+                HouseDirector houseDirector = new HouseDirector(simpleHouseBuilder);
+
+                houseDirector.ConstructHouse();
+                House simpleHouse = simpleHouseBuilder.GetHouse();
+
+                Console.WriteLine("Simple House:");
+                simpleHouse.Display();
+            
+
 
             //DECORATOR
-            IPizza pizza =new Baccon(new Pineapple(new BasePizza()));
-            pizza.prepare();
+            // IPizza pizza =new Baccon(new Pineapple(new BasePizza()));
+            // pizza.prepare();
 
             //Nirvan
-            string name = "new";
-            string model = "cloud";
-            Plane<string> p = new Plane<string>(name,model);
-            p.display();
+            // string name = "new";
+            // string model = "cloud";
+            // Plane<string> p = new Plane<string>(name,model);
+            // p.display();
 
-            
+
         }
     }
 
