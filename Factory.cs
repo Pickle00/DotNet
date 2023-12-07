@@ -48,7 +48,7 @@ class Titanum : CreditCard{
         return 500;
     }
 }
-
+  
 
 
 public class CreditCardFactory
@@ -75,3 +75,6 @@ public class CreditCardFactory
     }
 
 }
+
+
+// base.cost(base.cost()+2)+2

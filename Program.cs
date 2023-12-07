@@ -45,7 +45,7 @@ namespace Program
             // Console.WriteLine($"Balance: {bank.Balance}");
 
 
-            //Abstraction
+            // Abstraction
             // Dog myDog = new Dog();
             // myDog.animalsound();
             // myDog.sleep();
@@ -94,7 +94,7 @@ namespace Program
             // Console.WriteLine(singletonInstance);
 
 
-            //Without-Factory
+            //With-Factory
             // string cardType = "";
             // int cardNo;
             // Console.WriteLine("Select your card type");
@@ -141,27 +141,38 @@ namespace Program
             // builder.setSize(15);
             // builder.setGraphics("GTX 1650");
 
-                IHouseBuilder simpleHouseBuilder = new SimpleHouseBuilder();
-                HouseDirector houseDirector = new HouseDirector(simpleHouseBuilder);
+            // IHouseBuilder simpleHouseBuilder = new SimpleHouseBuilder();
+            // HouseDirector houseDirector = new HouseDirector(simpleHouseBuilder);
 
-                houseDirector.ConstructHouse();
-                House simpleHouse = simpleHouseBuilder.GetHouse();
+            // houseDirector.ConstructHouse();
+            // House simpleHouse = simpleHouseBuilder.GetHouse();
 
-                Console.WriteLine("Simple House:");
-                simpleHouse.Display();
-            
+            // Console.WriteLine("Simple House:");
+            // simpleHouse.Display();
 
 
-            //DECORATOR
+
+            // DECORATOR
             // IPizza pizza =new Baccon(new Pineapple(new BasePizza()));
             // pizza.prepare();
+
+            //FACADE
+
+            // OrderFacade orderFacade = new OrderFacade();
+            // orderFacade.placeOrder();
+
+            //Observer
+             Subject subject = new Subject();
+        ConstructObserver observer1 = new ConstructObserver(subject);
+        ConstructObserver observer2 = new ConstructObserver(subject);
+
+        subject.State = 1;
 
             //Nirvan
             // string name = "new";
             // string model = "cloud";
             // Plane<string> p = new Plane<string>(name,model);
             // p.display();
-
 
         }
     }
